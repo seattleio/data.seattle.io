@@ -1,11 +1,11 @@
-# flatsheet quickstart
+# data.seattle.io
 
-Quickly create a flatsheet instance on your own server.
+Arbitrary datasets related to Seattle, WA
 
 ## Install
 
-- Run `git clone git@github.com:flatsheet/quickstart.git`
-- Change directory into quickstart: `cd quickstart`
+- Run `git clone git@github.com:seattleio/data.seattle.io.git`
+- Change directory into quickstart: `cd data.seattle.io`
 - Run `npm install`
 - Create an admin user: `npm run flatsheet account create-admin`
 - If you want to be able to send email: 
