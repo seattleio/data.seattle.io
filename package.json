@@ -1,0 +1,16 @@
+{
+  "name": "demo.flatsheet.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "flatsheet": "flatsheet",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "flatsheet": "^0.8.0",
+    "response": "git://github.com/mikeal/response"
+  }
+}
