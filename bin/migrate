@@ -1,0 +1,31 @@
+#! /usr/bin/env node
+
+var request = require('request')
+var flatsheet = require('flatsheet')({
+  db: __dirname + '/../data'
+}, migrate)
+
+var sheets = [
+  'http://app.flatsheet.io/api/v1/sheets/ekfccwpcg3nb144zthuj5q',
+  'http://app.flatsheet.io/api/v1/sheets/zbckvrzp4ga27k0frnlhjq',
+  'http://app.flatsheet.io/api/v1/sheets/bbn6_tq9_qcqcfb6yi1w-g'
+]
+
+function migrate () {
+  sheets.forEach(function (url) {
+    request(url, function (err, res, body) {
+      var body = JSON.parse(body)
+      
+      var sheet = {
+        name: body.name,
+        description: body.description,
+        rows: body.rows
+      }
+      
+      flatsheet.sheets.create(sheet, function (err) {
+        if (err) console.log(err)
+      })
+    })
+  })
+}
+

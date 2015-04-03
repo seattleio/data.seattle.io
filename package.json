@@ -12,5 +12,8 @@
   "dependencies": {
     "flatsheet": "^0.9.1",
     "response": "git://github.com/mikeal/response"
+  },
+  "devDependencies": {
+    "request": "^2.54.0"
   }
 }
