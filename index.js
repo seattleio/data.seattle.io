@@ -21,6 +21,4 @@ app.route('/', function (req, res) {
   });
 });
 
-app.listen((process.env.PORT || 3333), function () {
-  console.log('server started at 127.0.0.1:' + (process.env.PORT || 3333));
-});
+app.listen(80)
