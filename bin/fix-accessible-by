@@ -1,0 +1,15 @@
+#! /usr/bin/env node
+
+var flatsheet = require('flatsheet')({
+  db: __dirname + '/../data'
+}, update)
+
+function update () {
+  flatsheet.sheets.list().on('data', function (sheet) {
+    if (!sheet.accessible_by) sheet.accessible_by = {}
+
+    flatsheet.sheets.update(sheet.id, sheet, function (err) {
+      if (err) console.log(err)
+    })
+  })
+}
