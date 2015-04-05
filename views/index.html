@@ -8,19 +8,17 @@
 
     {{#each sheets}}
     <div class="list-item clearfix">
+      <div class="list-item-info">
+        <a href="/sheets/view/{{ id }}">
+          <h3 class="list-item-name">{{ name }}</h3>
+          <div class="list-item-description">{{ description }}</div>
+        </a>
+      </div>
       
-        <div class="list-item-info">
-          <a href="/sheets/view/{{ id }}">
-            <h3 class="list-item-name">{{ name }}</h3>
-            <div class="list-item-description">{{ description }}</div>
-          </a>
-        </div>
-        
-        <div class="list-item-actions">
-          <a href="/sheets/view/{{ id }}" class="button small">View sheet</a>
-          <a href="/api/v2/sheets/{{ id }}" class="button small">API</a>
-        </div>
-      
+      <div class="list-item-actions">
+        <a href="/sheets/edit/{{ id }}" class="button small">Edit sheet</a>
+        <a href="/api/v2/sheets/{{ id }}" class="button small">API</a>
+      </div>
     </div>
     {{/each }}
   </div>
