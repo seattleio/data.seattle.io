@@ -4,7 +4,7 @@ var app = require('flatsheet')({
   site: {
     title: 'data.seattle.io',
     email: 'hi@seattle.io',
-    url: 'http://data.seattle.io', // include port here if not at port 80
+    url: 'http://data.seattle.io',
     contact: 'Seth Vincent'
   },
   views: __dirname + '/views',
